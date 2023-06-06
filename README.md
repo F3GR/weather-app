@@ -1,7 +1,1 @@
-### Hi there 👋
-
-<!--
-
-Here I self-studying Web Development (MERN stack + Vue.js)
-
--->
+### Hi there 👋 Here I am self-studying Web Development (the MERN stack + Vue.js)
