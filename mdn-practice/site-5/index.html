@@ -6,10 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Basic audio embed</h1>
+    <h1>Video embed</h1>
 
-    <audio src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/tasks/media-embed/media/audio.mp3" controls>
-        <p> random soundtrack </p>
-    </audio>
+    <video controls muted>
+        <source src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/tasks/media-embed/media/video.mp4" 
+        type="video/mp4" width="320" height="240" />
+        <source src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/tasks/media-embed/media/video.webm" 
+        type="video/webm" width="320" height="240" />
+        <track src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/tasks/media-embed/media/subtitles_en.vtt" 
+        kind="subtitles" srclang="en" label="English" />
+        <p> random video </p>
+    </video>
 </body>
 </html>
