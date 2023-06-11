@@ -33,3 +33,11 @@ tr:nth-child(odd) td {
 caption {
   padding: 10px;
 }
+
+tr:nth-child(odd) td {
+  background-color: rgb(245,245,245);
+}
+
+caption {
+  padding: 10px;
+}
