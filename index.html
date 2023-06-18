@@ -9,36 +9,24 @@
 </head>
 
 <body>
-  const select = document.querySelector('select');
-  const html = document.querySelector('.output');
+  let season = 'summer';
+  let response;
   
-  select.addEventListener('change', () => {
-    const choice = select.value;
-  
-    // ADD SWITCH STATEMENT
-    switch(choice) {
-       case "white":
-        update(white, white);
-        break;
-      case "black":
-        update(black, black):
-        break;
-      case "purple":
-        update(purple, purple):
-        break;
-      case "yellow":
-        update(purple, purple):
-        break;
-      case "psychedelic":
-        update(purple, purple):
-        break;
-    }
-  });
-  
-  function update(bgColor, textColor) {
-    html.style.backgroundColor = bgColor;
-    html.style.color = textColor;
+  // Add your code here
+  if (season === "summer") {
+      response = "The season is summer";
+  } else if (season === "winter") { 
+      response = "The season is winter";
+  } else {
+      response = "We don't know what this season is" 
   }
+  
+  // Don't edit the code below here!
+  const section = document.querySelector('.preview');
+  section.innerHTML = ' ';
+  let para1 = document.createElement('p');
+  para1.textContent = response;
+  section.appendChild(para1);
   
   </script>
 </body>
