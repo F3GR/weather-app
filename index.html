@@ -12,12 +12,12 @@
   <script>
     let userPrompt = prompt("Who's there?");
     if (userPrompt === "Admin") {
-      userPrompt = prompt("Password?")
-      if (userPrompt === "TheMaster") {
+      let userPassword = prompt("Password?")
+      if (userPassword === "TheMaster") {
         alert("Welcome!")
-      } else if (userPrompt === "" || 
-                userPrompt === "Cancel" ||
-                userPrompt === null) {
+      } else if (userPassword === "" || 
+                userPassword === "Cancel" ||
+                userPassword === null) {
         alert("Canceled")
       } else {
         alert("Wrong password")
