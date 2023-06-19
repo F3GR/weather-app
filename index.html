@@ -6,52 +6,50 @@
   <link href="reset.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
   <title>Document</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
 </head>
 
 <body>
+  <input class="numberInput" type="text">
+  <p></p>
+
   <script>
-    let response;
-let score = 10;
-let machineActive = true;
-
-if (machineActive) {
-	// Add your code here
-        switch (true) {
-        case (score < 0 || score > 100): 
-            response = "This is not possible, an error has occurred.";
-            break;
-        case (score <= 19): 
-            response = "That was a terrible score — total fail!";
-            break;
-        case (score <= 39): 
-            response = "You know some things, but it\'s a pretty bad score. Needs improvement.";
-            break;
-        case (score <= 69): 
-            response = "You did a passable job, not bad!";
-            break;
-        case (score <= 89): 
-            response = "That\'s a great score, you really know your stuff.";
-            break;
-        default:
-            response = "What an amazing score! Did you cheat? Are you for real?";
-}
-} else {
-  response = 'The machine is turned off. Turn it on to process your score.';
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+    function squared(num) {
+  return num * num;
 }
 
+function cubed(num) {
+  return num * num * num;
+}
 
-// Don't edit the code below here!
-
-section.innerHTML = ' ';
-let para1 = document.createElement('p');
-let para2 = document.createElement('p');
-
-para1.textContent = `Your score is ${ score }.`;
-para2.textContent = response;
-
-section.appendChild(para1);
-section.appendChild(para2);
-
+function factorial(num) {
+  if (num < 0) return undefined;
+  if (num === 0) return 1;
+  let x = num - 1;
+  while (x > 1) {
+    num *= x;
+    x--;
+  }
+  return num;
+}
+  input.addEventListener("change", () => {
+  const num = parseFloat(input.value);
+  if (isNaN(num)) {
+    para.textContent = "You need to enter a number!";
+  } else {
+    para.textContent = `${num} squared is ${squared(num)}. `;
+    para.textContent += `${num} cubed is ${cubed(num)}. `;
+    para.textContent += `${num} factorial is ${factorial(num)}. `;
+  }
+});
   </script>
+
 </body>
 </html>
