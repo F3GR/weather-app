@@ -11,30 +11,24 @@
 </head>
 
 <body>
-    <script>
-        const para = document.createElement('p');
-        para.innerText = `Hey I'm red!`;
-        para.style.color = "red";
-        document.body.appendChild(para);
+  <div id="container">
+    <button id="1">Click Me</button>
+    <button id="2">Click Me</button>
+    <button id="3">Click Me</button>
+  </div>
+  <script>
+    // buttons is a node list. It looks and acts much like an array.
+    const buttons = document.querySelectorAll('button');
 
+    // we use the .forEach method to iterate through each button
+    buttons.forEach((button) => {
 
-        const h3 = document.createElement('h3');
-        h3.innerText = `I'm a blue h3!`;
-        h3.style.color = "blue";
-        document.body.appendChild(h3);
-
-
-        const div = document.createElement('div');
-        document.body.appendChild(div);
-
-        const h1 = document.createElement('h1');
-        h1.innerText = `I'm in a div`;
-        div.appendChild(h1);
-
-        const divPara = document.createElement('p');
-        divPara.innerText = "ME TOO!";
-        div.appendChild(divPara);
-    </script>
+    // and for each one we add a 'click' listener
+    button.addEventListener('click', () => {
+      alert(button.id);
+    });
+  });
+  </script>
 </body>
 
 </html>
