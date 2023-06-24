@@ -17,17 +17,33 @@
     <button id="3">Click Me</button>
   </div>
   <script>
-    // buttons is a node list. It looks and acts much like an array.
-    const buttons = document.querySelectorAll('button');
 
-    // we use the .forEach method to iterate through each button
-    buttons.forEach((button) => {
+  sumArray([ 6, 2, 1, 8, 10 ]);
 
-    // and for each one we add a 'click' listener
-    button.addEventListener('click', () => {
-      alert(button.id);
-    });
-  });
+  function sumArray(array) {
+  if (array === null || array === [] || array.length <= 2) {
+   return 0;
+  }
+  let arrayLength = array.length;
+  let maxValue = array[0];
+  let minValue = array[0];
+  let sum = 0;
+  let i;
+  for (i = 0; i < arrayLength; i++) {
+    if (maxValue < array[i]) {
+      maxValue = array[i];
+    }
+    if (minValue > array[i]) {
+      minValue = array[i];
+    }
+  }
+  for (i = 0; i < arrayLength; i++) {
+    if (array[i] < maxValue && array[i] > minValue) {
+      sum += array[i];
+    }
+  }
+  return sum;
+}
   </script>
 </body>
 
