@@ -17,33 +17,11 @@
     <button id="3">Click Me</button>
   </div>
   <script>
-
-  sumArray([ 6, 2, 1, 8, 10 ]);
-
-  function sumArray(array) {
-  if (array === null || array === [] || array.length <= 2) {
-   return 0;
-  }
-  let arrayLength = array.length;
-  let maxValue = array[0];
-  let minValue = array[0];
-  let sum = 0;
-  let i;
-  for (i = 0; i < arrayLength; i++) {
-    if (maxValue < array[i]) {
-      maxValue = array[i];
-    }
-    if (minValue > array[i]) {
-      minValue = array[i];
-    }
-  }
-  for (i = 0; i < arrayLength; i++) {
-    if (array[i] < maxValue && array[i] > minValue) {
-      sum += array[i];
-    }
-  }
-  return sum;
-}
+      let user = {};
+      user.name = "John";
+      user.surname = "Smith";
+      user.name = "Pete";
+      delete user.name;
   </script>
 </body>
 
