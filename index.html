@@ -17,43 +17,22 @@
     <button id="3">Click Me</button>
   </div>
   <script>
-    let person1 = {
-      name: "hey",
-      age: 50,
-    };
-    let person2 = {
-      name: "hey",
-      age: 50,
+    // before the call
+    let menu = {
+      width: 200,
+      height: 300,
+      title: "My menu"
     };
 
-    alert(compareObjects(person1, person2));
+    multiplyNumeric(menu, 2);
 
-function compareObjects(obj1, obj2) {
-  // Get the properties of each object
-  let obj1Props = Object.keys(obj1);
-  let obj2Props = Object.keys(obj2);
-
-  // Compare the number of properties
-  if (obj1Props.length !== obj2Props.length) {
-    return false;
-  } else {
-    // Compare the values of each property
-    let allPropsAreEqual = true;
-    for (let i = 0; i < obj1Props.length; i++) {
-      let propName = obj1Props[i];
-      if (obj1[propName] !== obj2[propName]) {
-        allPropsAreEqual = false;
-        return false;
+    function multiplyNumeric(object, multiplicator) {
+      for (key in object) {
+        if (typeof object[key] === 'n')) {
+          object[key] *= multiplicator;
+        }
       }
     }
-
-    if (allPropsAreEqual) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-}
 
   </script>
 </body>
