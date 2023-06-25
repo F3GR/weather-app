@@ -17,21 +17,27 @@
     <button id="3">Click Me</button>
   </div>
   <script>
-    let menu = {
-      width: 200,
-      height: 300,
-      title: "My menu"
-    };
+    let bandInfo;
 
-      multiplyNumeric(menu, 2);
+// Put your code here
 
-    function multiplyNumeric(object, multiplicator) {
-      for (key in object) {
-        if (!isNaN(object[key])) {
-          object[key] *= multiplicator;
-        }
-      }
-    }
+
+
+
+
+const cat2 = {
+  name : 'Elfie',
+  breed : 'Aphrodite Giant',
+  color : 'ginger',
+  greeting: greet,
+}
+
+function greet(obj) {
+    console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+}
+
+cat.greeting();
+cat2.greeting();
 
   </script>
 </body>
