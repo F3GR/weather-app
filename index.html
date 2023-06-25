@@ -17,18 +17,17 @@
     <button id="3">Click Me</button>
   </div>
   <script>
-    // before the call
     let menu = {
       width: 200,
       height: 300,
       title: "My menu"
     };
 
-    multiplyNumeric(menu, 2);
+      multiplyNumeric(menu, 2);
 
     function multiplyNumeric(object, multiplicator) {
       for (key in object) {
-        if (typeof object[key] === 'n')) {
+        if (!isNaN(object[key])) {
           object[key] *= multiplicator;
         }
       }
