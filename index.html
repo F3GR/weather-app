@@ -18,17 +18,43 @@
   </div>
   <script>
 
-    let arr = ["HTML", "JavaScript", "CSS"];
+    let calc = new Calculator;
+    function Calculator() {
+      this.methods = {
+        "+": (a, b) => a + b,
+        "-": (a, b) => a - b,
+        "*": (a, b) => a * b,
+        "/": (a, b) => a / b,
+        "**": (a, b) => a ** b,
+      };
 
-    let sorted = copySorted(arr.slice(0));
+      this.calculate = function(str) {
+        let splitExpression = str.split(' '),
+          a = +splitExpression[0],
+          operator = splitExpression[1],
+          b = +splitExpression[2];
 
-    function copySorted(array) {
-      return array.sort((a, b) => (a.localeCompare(b)));
+        if (!this.methods[operator] || isNaN(a) || isNaN(b)) {
+          return NaN;
+        }
+
+        return this.methods[operator](a, b);
+      }
+
+      this.addMethod = function(name, func) {
+        this.methods[name] = func;
+      };
     }
-
-    console.log( sorted ); // CSS, HTML, JavaScript
-    console.log( arr ); // HTML, JavaScript, CSS (no changes)
-
+    
+    console.log(calc);
+    console.log( calc.calculate("3 + 7") ); // 10
+    console.log( calc.calculate("3 - 7") ); // -4
+    console.log( calc.calculate("3 * 7") ); // 21
+    console.log( calc.calculate("7 * 7") ); // 49
+    console.log( calc.calculate("2 ** 5") ); // 32
+    calc.addMethod("^", (a, b) => a ** b);
+    console.log( calc.calculate("2 ^ 5") ); // 32
+    
   </script>
 </body>
 
