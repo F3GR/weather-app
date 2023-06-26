@@ -17,44 +17,33 @@
     <button id="3">Click Me</button>
   </div>
   <script>
+let users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
 
-    let calc = new Calculator;
-    function Calculator() {
-      this.methods = {
-        "+": (a, b) => a + b,
-        "-": (a, b) => a - b,
-        "*": (a, b) => a * b,
-        "/": (a, b) => a / b,
-        "**": (a, b) => a ** b,
-      };
+let usersById = groupById(users);
 
-      this.calculate = function(str) {
-        let splitExpression = str.split(' '),
-          a = +splitExpression[0],
-          operator = splitExpression[1],
-          b = +splitExpression[2];
+function groupById(arr) {
+  let result = {};
+  arr.forEach( (item) => result[item.id] = item );
+  return result;
+}
 
-        if (!this.methods[operator] || isNaN(a) || isNaN(b)) {
-          return NaN;
-        }
+console.log(users)
+console.log(usersById)
 
-        return this.methods[operator](a, b);
-      }
+/*
+// after the call we should have:
 
-      this.addMethod = function(name, func) {
-        this.methods[name] = func;
-      };
-    }
-    
-    console.log(calc);
-    console.log( calc.calculate("3 + 7") ); // 10
-    console.log( calc.calculate("3 - 7") ); // -4
-    console.log( calc.calculate("3 * 7") ); // 21
-    console.log( calc.calculate("7 * 7") ); // 49
-    console.log( calc.calculate("2 ** 5") ); // 32
-    calc.addMethod("^", (a, b) => a ** b);
-    console.log( calc.calculate("2 ^ 5") ); // 32
-    
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/
+
   </script>
 </body>
 
