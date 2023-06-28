@@ -7,7 +7,7 @@
 
 *::not(img),
 *::before,
-*::after, {
+*::after {
     margin: inherit;
     padding: inherit;
     box-sizing: inherit;
