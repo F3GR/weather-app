@@ -1,8 +1,95 @@
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  
 * {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
     box-sizing: border-box;
+    vertical-align: baseline;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: var(--system-ui);
+}
+
+html {
+    font-size: 75%; /* equals 12px */
+}
+
+body {
+    width: 100%; /* might be changed if necessary */
+    min-height: 80%; /* might be changed if necessary */
+    padding: 5% 10%; /* might be changed if necessary */
+    font-size: 1.6rem;
+    line-height: 1.75;
+    letter-spacing: 0.05rem;
+}
+
+img, picture, video, canvas, svg,
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+    max-width: 100%;
+}
+
+button, textarea, select, input, li {
+    font: inherit;
+    font-size: 1.6rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+    list-style-position: outside;
+    list-style: decimal;
+}
+
+h1, h2, h3, h4, h5, h6, nav, ul, ol, table, form {
+    margin-top: 4rem;
+}
+
+p {
+    margin: 2rem 0;
+}
+
+article, p {
+    max-width: 50rem;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 
 *::not(img),
@@ -11,19 +98,6 @@
     margin: inherit;
     padding: inherit;
     box-sizing: inherit;
-}
-
-body {
-    min-height: 100vh;
-}
-
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-}
-
-button, textarea, select, input {
-    font: inherit;
 }
 
 /***** LAYOUT AND SIZING *****/
