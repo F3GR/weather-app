@@ -10,45 +10,63 @@
 </head>
 <body>
   <form>
-    <h2>Edit your preferences</h2>
+    <h2>Enter your comment</h2>
     <ul>
       <li>
-        <label for="e-mail">Email</label>
-        <input type="email" id="e-mail" name="email" />
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
       </li>
       <li>
-        <label for="website">Website</label>
-        <input type="url" id="website" name="url" />
+        <label for="comment">Comment:</label>
+        <textarea name="comment" id="comment" cols="35" rows="10" maxlength="100"></textarea>
       </li>
       <li>
-        <label for="phone">Phone number</label>
-        <input type="tel" id="phone" name="tel" />
-      </li>
-      <li>
-        <label for="fave-color">Favorite color</label>
-        <input type="color" id="fave-color name="fav-color" />
-      </li>
-      <li>
-        <button>Update preferences</button>
+        <button>Submit comment</button>
       </li>
     </ul>
   </form>
   <form>
     <ul>
       <li>
-        <label for="max-invite">Select maximum number of invitations</label>
-        <input
-          type="range"
-          name="max-invite"
-          id="max-invite"
-          min="1"
-          max="30"
-          step="1"
-          value="10" />
-        <output class="invite-output" for="max-invite"></output>
+        <label for="food">Pick your favorite food:</label>
+        <select name="food" id="food">
+          <optgroup label="main">
+            <option value="salad">Salad</option>
+            <option value="curry">Curry</option>
+            <option value="pizza">Pizza</option>
+            <option value="fajitas">Fajitas</option>
+          </optgroup>
+          <optgroup label="snaks">
+            <option value="biscuits">Biscuits</option>
+            <option value="crisps">Crisps</option>
+            <option value="fruit">Fruit</option>
+            <option value="breadsticks">Breadsticks</option>
+          </optgroup>
+        </select>
       </li>
       <li>
-        <button>Submit</button>
+        <button>Submit choice</button>
+      </li>
+    </ul>
+  </form>
+  <form>
+    <ul>
+      <li>
+        <label for="fav-food">Enter your favorite food:</label>
+        <input type="text" name="food" id="fav-food" list="fav-food-choices" />
+        <datalist id="fav-food-choices">
+          <option>Salad</option>
+          <option>Curry</option>
+          <option>Pizza</option>
+          <option>Fajitas</option>
+          <option>Biscuits</option>
+          <option>Crisps</option>
+          <option>Fruit</option>
+          <option>Breadsticks</option>
+        </datalist> 
+      </li>
+      <li>
+        <button>Submit choice</button>
       </li>
     </ul>
   </form>
