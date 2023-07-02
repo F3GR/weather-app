@@ -10,34 +10,63 @@
 </head>
 <body>
   <form>
+    <ul>
+      <li>
+        <label for="user-id" required>User ID:</label>
+        <input type ="text" id="user-id" name="user-id" />
+      </li>
+      <li>
+        <label for="password" required>Password:</label>
+        <input type="password" id="password" name="password" />
+      </li>
+      <li>
+        <button type="submit">Log in</button>
+      </li>
+    </ul>
+  </form>
+  <form>
     <fieldset>
-      <legend>Personal details</legend>
-        <ul>
-          <li>
-            <label for="name"><span>Name:</span></label>
-            <strong><span aria-label="required">*</span></strong>
-            <input type="text" id="name" name="name" required>
-          </li>
-          <li>
-            <label for="age"><span>Age:</span></label>
-            <input type="number" id="age" name="age">
-          </li>
-        </ul>
-    </fieldset>
-    <fieldset>
-      <legend>Comment information</legend>
+      <legend>Who is your favorite pony?</legend>
       <ul>
         <li>
-          <label for="comment"><span>Comment:</span></label>
-          <input type="text" id="comment" name="comment">
+          <label for="pinkie">Pinkie Pie</label>
+          <input type="radio" id="pinkie" name="pony" value="pinkie" checked />
+
         </li>
         <li>
-          <label for="email"><span>E-mail:</span></label>
-          <strong><span aria-label="required">*</span></strong>
-          <input type="email" id="email" name="email" required>
+          <label for="rainbow">Rainbow Dash</label>
+          <input type="radio" id="rainbow" name="pony" value="rainbow-dash" />
+        </li>
+        <li>
+          <label for="twilight">Twilight Sparkle</label>
+          <input type="radio" id="twilight" name="pony" value="twilight-sparkle" />
         </li>
       </ul>
     </fieldset>
+    <fieldset>
+      <legend>Hotdog preferences</legend>
+      <ul>
+        <li>
+          <label for="vegan">Vegan</label>
+          <input type="radio" id="vegan" name="hotdog" value="vegan" checked />
+
+        </li>
+        <li>
+          <label for="onions">Onions</label>
+          <input type="radio" id="onions" name="hotdog" value="onions" />
+        </li>
+      </ul>
+    </fieldset>
+    <button type="submit">Submit</button>
   </form>
+  <form>
+    <ul>
+      <li>
+        <label for="gallery-img">Choose gallery images to upload</label>
+        <input type="file" ame="file" id="file" accept=".png, .jpg" multiple required />
+      </li>
+    </ul>
+  <button>Submit</button>
+</form>
 </body>
 </html>
