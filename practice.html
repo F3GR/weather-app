@@ -10,63 +10,47 @@
 </head>
 <body>
   <form>
+    <h2>Edit your preferences</h2>
     <ul>
       <li>
-        <label for="user-id" required>User ID:</label>
-        <input type ="text" id="user-id" name="user-id" />
+        <label for="e-mail">Email</label>
+        <input type="email" id="e-mail" name="email" />
       </li>
       <li>
-        <label for="password" required>Password:</label>
-        <input type="password" id="password" name="password" />
+        <label for="website">Website</label>
+        <input type="url" id="website" name="url" />
       </li>
       <li>
-        <button type="submit">Log in</button>
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="tel" />
+      </li>
+      <li>
+        <label for="fave-color">Favorite color</label>
+        <input type="color" id="fave-color name="fav-color" />
+      </li>
+      <li>
+        <button>Update preferences</button>
       </li>
     </ul>
   </form>
   <form>
-    <fieldset>
-      <legend>Who is your favorite pony?</legend>
-      <ul>
-        <li>
-          <label for="pinkie">Pinkie Pie</label>
-          <input type="radio" id="pinkie" name="pony" value="pinkie" checked />
-
-        </li>
-        <li>
-          <label for="rainbow">Rainbow Dash</label>
-          <input type="radio" id="rainbow" name="pony" value="rainbow-dash" />
-        </li>
-        <li>
-          <label for="twilight">Twilight Sparkle</label>
-          <input type="radio" id="twilight" name="pony" value="twilight-sparkle" />
-        </li>
-      </ul>
-    </fieldset>
-    <fieldset>
-      <legend>Hotdog preferences</legend>
-      <ul>
-        <li>
-          <label for="vegan">Vegan</label>
-          <input type="radio" id="vegan" name="hotdog" value="vegan" checked />
-
-        </li>
-        <li>
-          <label for="onions">Onions</label>
-          <input type="radio" id="onions" name="hotdog" value="onions" />
-        </li>
-      </ul>
-    </fieldset>
-    <button type="submit">Submit</button>
-  </form>
-  <form>
     <ul>
       <li>
-        <label for="gallery-img">Choose gallery images to upload</label>
-        <input type="file" ame="file" id="file" accept=".png, .jpg" multiple required />
+        <label for="max-invite">Select maximum number of invitations</label>
+        <input
+          type="range"
+          name="max-invite"
+          id="max-invite"
+          min="1"
+          max="30"
+          step="1"
+          value="10" />
+        <output class="invite-output" for="max-invite"></output>
+      </li>
+      <li>
+        <button>Submit</button>
       </li>
     </ul>
-  <button>Submit</button>
-</form>
+  </form>
 </body>
 </html>
