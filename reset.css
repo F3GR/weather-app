@@ -10,6 +10,8 @@
     border-collapse: collapse;
     border-spacing: 0;
     font-family: var(--system-ui);
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 html {

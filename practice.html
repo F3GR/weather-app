@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
     <title>Document</title>
+    <style>
+    </style>
 </head>
 <body>
-    <script>
-    </script>
+  <form>
+    <fieldset>
+      <legend>Personal details</legend>
+        <ul>
+          <li>
+            <label for="name"><span>Name:</span></label>
+            <strong><span aria-label="required">*</span></strong>
+            <input type="text" id="name" name="name" required>
+          </li>
+          <li>
+            <label for="age"><span>Age:</span></label>
+            <input type="number" id="age" name="age">
+          </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+      <legend>Comment information</legend>
+      <ul>
+        <li>
+          <label for="comment"><span>Comment:</span></label>
+          <input type="text" id="comment" name="comment">
+        </li>
+        <li>
+          <label for="email"><span>E-mail:</span></label>
+          <strong><span aria-label="required">*</span></strong>
+          <input type="email" id="email" name="email" required>
+        </li>
+      </ul>
+    </fieldset>
+  </form>
 </body>
 </html>
