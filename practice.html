@@ -9,19 +9,36 @@
     </style>
 </head>
 <body>
-  <div class="container">
-    <div>Item 1</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
-    <div>Item 4</div>
-    <div>Item 5</div>
-    <div>Item@-61</div>
-    <div>Item@-62</div>
-    <div>Item@-63</div>
-    <div>Item@-62</div>
-    <div>Item@-63</div>
-    <div>Item@-63</div>
-    <div>Item@-62</div>
-  </div>
+  <script>
+    function newCar(color, model) {
+      let obj = Object.create(newCar.prototype);
+      obj.color = color;
+      obj.model = model;
+      return obj;
+    }
+
+    const yellowToyota = newCar('yellow', 'Toyota');
+    console.log(yellowToyota.color);
+    console.log(yellowToyota.model);
+    
+    function blackCar(color, model) {
+      let obj = Object.create(blackCar.prototype);
+      obj.color = 'black';
+      obj.model = model;
+      return obj;
+    }
+
+    const greenToyota = newCar('green', 'Toyota');
+    console.log(greenToyota.color);
+    console.log(greenToyota.model);
+    const blackToyota = blackCar('green', 'Toyota');
+    console.log(greenToyota.color);
+    console.log(greenToyota.model);
+    console.log(yellowToyota.color);
+    console.log(yellowToyota.model);
+    console.log(blackToyota.color);
+    console.log(blackToyota.model);
+
+  </script>
 </body>
 </html>
