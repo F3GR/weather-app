@@ -10,35 +10,54 @@
 </head>
 <body>
   <script>
-    function newCar(color, model) {
-      let obj = Object.create(newCar.prototype);
-      obj.color = color;
-      obj.model = model;
-      return obj;
-    }
+    const barker = (state) => ({
+	bark: () => console.log('Woof, I am ' + state.name),
+});
 
-    const yellowToyota = newCar('yellow', 'Toyota');
-    console.log(yellowToyota.color);
-    console.log(yellowToyota.model);
-    
-    function blackCar(color, model) {
-      let obj = Object.create(blackCar.prototype);
-      obj.color = 'black';
-      obj.model = model;
-      return obj;
-    }
+const driver = (state) => ({
+	drive: () => state.position = state.position + state.speed,
+});
 
-    const greenToyota = newCar('green', 'Toyota');
-    console.log(greenToyota.color);
-    console.log(greenToyota.model);
-    const blackToyota = blackCar('green', 'Toyota');
-    console.log(greenToyota.color);
-    console.log(greenToyota.model);
-    console.log(yellowToyota.color);
-    console.log(yellowToyota.model);
-    console.log(blackToyota.color);
-    console.log(blackToyota.model);
+const pooper = (state) => ({
+	poop: () => console.log(state.name + ' pooped'),
+});
 
+const killer = (state) => ({
+	kill: () => console.log(state.name + ' killed someone!'),
+});
+
+const murderRobotDog = (name) => {
+	let state = {
+	    name,
+ 	    speed: 100,
+	    position: 0,
+	}
+	return Object.assign(
+	    {},
+	    barker(state),
+	    driver(state),
+	    killer(state),
+	)
+}
+
+const sniffles = murderRobotDog('sniffles');
+sniffles.bark();
+sniffles.kill();
+
+const dog = (name) => {
+	let state = {
+	    name,
+	}
+	return Object.assign(
+	    {},
+	    barker(state),
+	    pooper(state),
+	)
+}
+
+const petty = dog('petty');
+petty.bark();
+petty.poop();
   </script>
 </body>
 </html>
