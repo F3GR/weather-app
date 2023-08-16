@@ -1,0 +1,33 @@
+.slide-container {
+    display: grid;
+    grid-template-rows: 1fr 30px;
+    margin: 5% 20%;
+    height: 400px;
+}
+
+.slide-main {
+    display: grid;
+    grid-area: 1 / 1 / 2 / -1;
+    grid-template-columns: 50px 1fr 50px;
+}
+.slide-main > img {
+    align-self: center;
+}
+.slide-main > img:hover {
+    transform: scale(1.2);
+}
+.slide-main > img:active {
+    transform: scale(1);
+}
+.slide-main > .slide {
+    display: grid;
+    border: 1px solid black;
+}
+
+.slide-foot {
+    display: flex;
+    justify-content: center;
+}
+.slide-foot > img.current {
+    border: 2px solid red;
+}

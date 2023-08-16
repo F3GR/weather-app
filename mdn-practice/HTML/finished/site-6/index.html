@@ -1,36 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive image</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Responsive images</h1>
-    <h2>Here is a responsive image - first, more code intensive method using sizes, 
-        the most robust (recommended)</h2>
+    <h2>
+      Here is a responsive image - first, more code intensive method using
+      sizes, the most robust (recommended)
+    </h2>
     <!-- sizes="" are needed change the width to a fixed size depending on a condition () -->
-    <img src="./images/landscape-mountain-360x800.jpg"
-        srcset="./images/landscape-mountain-360x800.jpg 360w,
-        ./images/landscape-mountain-944x944.jpg 944w, 
-        ./images/landscape-mountain-original.jpg 1440w"
-        sizes="(max-width:600px) 360px, (max-width:1100px) 944px,
-        1300px" 
-        alt="Road under the beautiful mountain landscape" />
+    <img
+      src="./images/landscape-mountain-360x800.jpg"
+      srcset="
+        ./images/landscape-mountain-360x800.jpg   360w,
+        ./images/landscape-mountain-944x944.jpg   944w,
+        ./images/landscape-mountain-original.jpg 1440w
+      "
+      sizes="(max-width:600px) 360px, (max-width:1100px) 944px,
+        1300px"
+      alt="Road under the beautiful mountain landscape"
+    />
 
-    <h2>Here is a responsive image - second method using ratios over fixed pixel resolution</h2>
-    <img width="360" src="./images/landscape-mountain-360x800.jpg"
-        srcset="./images/landscape-mountain-360x800.jpg,
-        ./images/landscape-mountain-944x944.jpg 2x, 
-        ./images/landscape-mountain-original.jpg 3x"
-        alt="Road under the beautiful mountain landscape" />
+    <h2>
+      Here is a responsive image - second method using ratios over fixed pixel
+      resolution
+    </h2>
+    <img
+      width="360"
+      src="./images/landscape-mountain-360x800.jpg"
+      srcset="
+        ./images/landscape-mountain-360x800.jpg,
+        ./images/landscape-mountain-944x944.jpg  2x,
+        ./images/landscape-mountain-original.jpg 3x
+      "
+      alt="Road under the beautiful mountain landscape"
+    />
 
     <h2>Here is a responsive image - third, the most concise method</h2>
     <picture>
-        <source media="(max-width: 600px)" srcset="./images/landscape-mountain-360x800.jpg" />
-        <source media="(max-width: 1200px)" srcset="./images/landscape-mountain-944x944.jpg" />
-        <img src="./images/landscape-mountain-original.jpg" 
-        alt="Road under the beautiful mountain landscape" />
+      <source
+        media="(max-width: 600px)"
+        srcset="./images/landscape-mountain-360x800.jpg"
+      />
+      <source
+        media="(max-width: 1200px)"
+        srcset="./images/landscape-mountain-944x944.jpg"
+      />
+      <img
+        src="./images/landscape-mountain-original.jpg"
+        alt="Road under the beautiful mountain landscape"
+      />
     </picture>
-</body>
+  </body>
 </html>

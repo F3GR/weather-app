@@ -1,4 +1,3 @@
-
 const myImage = document.querySelector("img");
 
 myImage.onclick = () => {
@@ -10,18 +9,17 @@ myImage.onclick = () => {
   }
 };
 
-
 let myButton = document.querySelector("button");
 let myHeading = document.querySelector("h1");
 
 function setUserName() {
-    const myName = prompt("Please enter your name");
-    if (!myName) {
-      setUserName();
-    } else {
-      localStorage.setItem("name", myName);
-      myHeading.textContent = `Mozilla is cool, ${myName}`;
-    }
+  const myName = prompt("Please enter your name");
+  if (!myName) {
+    setUserName();
+  } else {
+    localStorage.setItem("name", myName);
+    myHeading.textContent = `Mozilla is cool, ${myName}`;
+  }
 }
 
 if (!localStorage.getItem("name")) {
@@ -32,7 +30,5 @@ if (!localStorage.getItem("name")) {
 }
 
 myButton.onclick = () => {
-    setUserName();
+  setUserName();
 };
-  
-  

@@ -1,63 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      .task {
+        border: 1px solid black;
+        display: grid;
+      }
     </style>
-</head>
-<body>
-  <script>
-    const barker = (state) => ({
-	bark: () => console.log('Woof, I am ' + state.name),
-});
+  </head>
 
-const driver = (state) => ({
-	drive: () => state.position = state.position + state.speed,
-});
-
-const pooper = (state) => ({
-	poop: () => console.log(state.name + ' pooped'),
-});
-
-const killer = (state) => ({
-	kill: () => console.log(state.name + ' killed someone!'),
-});
-
-const murderRobotDog = (name) => {
-	let state = {
-	    name,
- 	    speed: 100,
-	    position: 0,
-	}
-	return Object.assign(
-	    {},
-	    barker(state),
-	    driver(state),
-	    killer(state),
-	)
-}
-
-const sniffles = murderRobotDog('sniffles');
-sniffles.bark();
-sniffles.kill();
-
-const dog = (name) => {
-	let state = {
-	    name,
-	}
-	return Object.assign(
-	    {},
-	    barker(state),
-	    pooper(state),
-	)
-}
-
-const petty = dog('petty');
-petty.bark();
-petty.poop();
-  </script>
-</body>
+  <body></body>
 </html>
