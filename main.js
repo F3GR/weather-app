@@ -16,7 +16,7 @@
   \*****************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reset.css */ \"./reset.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./style.css\");\n\n\nclass Testclass {}\n\n//# sourceURL=webpack://f3gr/./test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reset.css */ \"./reset.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./style.css\");\n\n\nconst img = document.querySelector('img');\nconst button = document.querySelector('button.new-image');\nbutton.addEventListener('click', e => {\n  const text = document.querySelector('#gif-query').value;\n  fetchNewImageSrc(img, text);\n});\nfunction fetchNewImageSrc(element, text) {\n  element.src = '';\n  fetch(`https://api.giphy.com/v1/gifs/translate?api_key=vKtQCOzfde0ZpQH426p1RN8qx1dqYuAD&s=${text}`).then(function (response) {\n    return response.json();\n  }).then(function (response) {\n    element.src = response.data.images.original.url;\n  });\n}\n\n//# sourceURL=webpack://f3gr/./test.js?");
 
 /***/ }),
 
