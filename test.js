@@ -7,11 +7,29 @@ const TEMP_MODES = {
     FAHRENHEIT: 'Fahrenheit'
 }
 
+const tempToggle = document.querySelector('button.degree-toggle')
+tempToggle.addEventListener('click', () => toggleTempMode(tempToggle, currentLocation))
+function toggleTempMode(element, locationJSON) {
+    if (!locationJSON) {
+        alert('Please search for the location before switching')
+        return
+    }
+    if (element.getAttribute('data-mode') === TEMP_MODES.CELSIUS) {
+        element.setAttribute('data-mode', `${TEMP_MODES.FAHRENHEIT}`)
+        element.innerText = 'Show in Celsius'
+    } else {
+        element.setAttribute('data-mode', `${TEMP_MODES.CELSIUS}`)
+        element.innerText = 'Show in Fahrenheit'
+    }
+    console.log(locationJSON)
+    updateTemperature(tempInfo, locationJSON)
+}
+
+
 const location = document.querySelector('.location')
 const img = document.querySelector('.weather-container > img')
 const description = document.querySelector('.weather-description')
 const tempInfo = document.querySelector('.temperature > .temperature-info')
-
 const searchBtn = document.querySelector('button.search-location')
 searchBtn.addEventListener('click', async () => {
     const text = document.querySelector('#location').value
@@ -23,17 +41,6 @@ searchBtn.addEventListener('click', async () => {
         updateTemperature(tempInfo, okResponse)
         currentLocation = okResponse
     }
-})
-
-const tempToggle = document.querySelector('.degree-toggle')
-tempToggle.addEventListener('click', () => {
-    if (tempToggle.getAttribute('data-mode') === TEMP_MODES.CELSIUS) {
-        tempToggle.innerText = TEMP_MODES.FAHRENHEIT
-    } else {
-        tempToggle.innerText = TEMP_MODES.CELSIUS
-    }
-    console.log(currentLocation)
-    updateTemperature(tempInfo, currentLocation)
 })
 
 async function loadWeather(text) {

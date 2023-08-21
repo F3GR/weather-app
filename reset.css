@@ -20,14 +20,12 @@
 }
 
 html {
-  font-size: 75%; /* equals 12px */
+  font-size: 62.5%;
 }
 
 body {
-  width: 100%; /* might be changed if necessary */
-  min-height: 80%; /* might be changed if necessary */
-  padding: 5% 10%; /* might be changed if necessary */
-  font-size: 1.6rem;
+  width: 100%;
+  min-height: 80%;
   line-height: 1.75;
   letter-spacing: 0.05rem;
 }
@@ -103,7 +101,7 @@ ul,
 ol,
 table,
 form {
-  margin-top: 4rem;
+  margin-top: 0;
 }
 
 p {
