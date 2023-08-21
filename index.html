@@ -7,20 +7,21 @@
     <style></style>
   <script defer src="main.js"></script></head>
   <body>
-    <h1>Weather App</h1>
-    <div class="query">
-      <label for="location">Write a location: </label>
-      <input id="location" name="location" type="text" required />
-      <button class="search-location">Show the weather in the location</button>
+    <div class="content">
+      <h1>Weather App</h1>
+      <div class="query">
+        <label for="location">Write a location: </label>
+        <input id="location" name="location" type="text" required />
+        <button class="search-location">Show the weather in the location</button>
+      </div>
+      <button class="degree-toggle" data-mode="Celsius">Show in Fahrenheit</button>
+      <div class="weather-container">
+        <span class="location"></span>
+        <img src="-" alt="-">
+        <span class="weather-description"></span>
+        <div class="temperature">Temperature (in Celsius): <span class="temperature-info"></span></div>
+      </div>
     </div>
-    <button class="degree-toggle" data-mode="Celsius">Show in Fahrenheit</button>
-    <div class="weather-container">
-      <span class="location"></span>
-      <img src="-" alt="-">
-      <span class="weather-description"></span>
-      <div class="temperature">Temperature (in Celsius): <span class="temperature-info"></span></div>
-    </div>
-
   </body>
 </html>
 
